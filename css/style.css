@@ -46,6 +46,17 @@ html,body {
 	vertical-align: top;
 }
 
+.main-navigation a {
+	display: block;
+	padding: 25px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.main-navigation a:hover {
+	background: #242424;
+}
+
 .main-navigation {
 	float: left;
 	width: 780px;
@@ -53,7 +64,38 @@ html,body {
 
 .user-block {
 	float: right;
-	width: 140px;
+	max-width: 140px;
+}
+
+.login {
+	position: relative;
+	display: inline-block;
+	padding: 25px 20px;
+	padding-left: 50px;
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: top;
+	color: #fff;
+	text-decoration: none;
+}
+
+.login:hover {
+	background-color: #242424;
+}
+
+.login::before {
+	content: '';
+	position: absolute;
+	top: 28px;
+	left: 20px;
+	width: 18px;
+	height: 18px;
+	background: transparent url('../img/css_sprites.png') no-repeat -92px -46px;
+	opacity: 0.3;
+}
+
+.login:hover::before {
+	opacity: 1;
 }
 
 .index-logo {
@@ -63,6 +105,11 @@ html,body {
 	margin-bottom: 25px;
 }
 
+.index-logo img {
+	width: 368px;
+	height: 204px;
+}
+
 .features {
 	margin-bottom: 80px;
 }
@@ -70,8 +117,30 @@ html,body {
 .features-item {
 	float: left;
 	width: 300px;
+	margin-right: 20px;
+	text-align: center;
+}
 
-	min-height: 175px;
+.features-name {
+	position: relative;
+	display: block;
+	margin-bottom: 30px;
+	padding: 35px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.features-name::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	background-color: #fff;
+	transform: rotate(45deg);
 }
 
 .features-item:last-child {
@@ -81,6 +150,10 @@ html,body {
 .index-content {
 	margin-bottom: 35px;
 	padding: 50px 80px;
+	color: #000;
+	background: 
+		url('../img/index-content-shadow.png') no-repeat center,
+		#f8f5f2 url('../img/pattern-white.jpg');
 }
 
 .index-content-left {
@@ -95,10 +168,138 @@ html,body {
 	min-height: 330px;
 }
 
+.index-content-title {
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.index-content p {
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+.news-preview {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 35px;
+}
+
+.news-preview li {
+	margin-bottom: 25px;
+}
+
+.news-preview p {
+	margin-bottom: 0;
+}
+
+.news-preview time {
+	font-weight: 400;
+	text-transform: none;
+}
+
+.btn {
+	display: inline-block;
+	margin-right: 16px;
+	padding: 10px 33px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background-color: #000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+	cursor: default;
+	opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+	background-color: #000;
+}
+
+.gallery {
+	position: relative;
+	height: 260px;
+}
+
+.gallery-content {
+	height: 164px;
+	margin: 0;
+	background-color: #ccc;
+	border: 7px solid #fff;
+}
+
+.gallery-content img {
+	width: 286px;
+	height: 164px;
+}
+
+.gallery .btn {
+	position: absolute;
+	bottom: 0;
+	width: 140px;
+	margin: 0;
+}
+
+.galler-prev {
+	left: 0;
+}
+
+.gallery-next {
+	right: 0;
+}
+
+.appointment-form input {
+	float: left;
+	width: 106px;
+	padding: 7px 15px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #000;
+	text-transform: uppercase;
+	background-color: #f9f6f3;
+	border: 2px solid #000;
+	outline: none;
+}
+
+.appointment-form input:nth-child(2n) {
+	margin-right: 0;
+}
+
+.appointment-form .btn {
+	clear: both;
+	width: 100%;
+}
+
+.appointment-form input:focus {
+	border: 2px solid #663d15;
+}
+
 .main-footer {
 	margin-top: 65px;
 	padding-top: 60px;
 	padding-bottom: 40px;
+	color: #fff;
+	background: #252525 url('../img/pattern-black.jpg');
 }
 
 .footer-contacts {
@@ -108,20 +309,141 @@ html,body {
 	min-height: 90px;
 }
 
+.footer-contacts a {
+	color: #fff;
+}
+
+.footer-contacts a:hover {
+	text-decoration: none;
+}
+
 .footer-social {
 	float: left;
 	width: 180px;
-	min-height: 90px;
+	text-align: center;
+}
 
+.footer-social p {
+	margin: 0;
+	margin-bottom: 15px;
 }
 
 .footer-copyright {
 	float: right;
-	width: 180px;
-	min-height: 90px;
+	max-width: 180px;
 }
+
+.footer-copyright p {
+	margin: 0;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.footer-copyright .btn {
+	margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+.social-btn {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	margin: 0 2px;
+	font-size: 0;
+	vertical-align: top;
+	text-decoration: none;
+	background: #000 url('../img/css_sprites.png') no-repeat center;
+}
+
+.social-btn:hover {
+	background-color: #fff;
+}
+
+.social-btn-vk {
+	background-position: -1px -38px;
+}
+
+.social-btn-fb {
+	background-position: 5px -77px;
+}
+
+.social-btn-inst {
+	background-position: 2px 0px;
+}
+
+.social-btn-vk:hover {
+	background-position: -83px 3px;
+}
+
+.social-btn-fb:hover {
+	background-position: -27px -77px;
+}
+
+.social-btn-inst:hover {
+	background-position: -39px 0px;
+}
+
 
 .modal-content,
 .modal-content-close {
 	display: none;
 }
+
+/*
+.bg-icon {
+    width: 18px; height: 16px;
+    background: url('css_sprites.png') -92px -46px;
+}
+
+x
+.bg-icon_form {
+    width: 15px; height: 17px;
+    background: url('css_sprites.png') -74px -87px;
+}
+
+x
+.bg-icon_form_user {
+    width: 15px; height: 15px;
+    background: url('css_sprites.png') -55px -51px;
+}
+
+x
+.bg-social_fb {
+    width: 12px; height: 22px;
+    background: url('css_sprites.png') -10px -87px;
+}
+
+x
+.bg-social_fb_active {
+    width: 12px; height: 22px;
+    background: url('css_sprites.png') -42px -87px;
+}
+
+x
+.bg-social_inst {
+    width: 21px; height: 21px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+x
+.bg-social_inst_active {
+    width: 21px; height: 21px;
+    background: url('css_sprites.png') -51px -10px;
+}
+
+x
+.bg-social_vk {
+    width: 25px; height: 16px;
+    background: url('css_sprites.png') -10px -51px;
+}
+
+x
+.bg-social_vk_active {
+    width: 25px; height: 16px;
+    background: url('css_sprites.png') -92px -10px;
+}
+*/
