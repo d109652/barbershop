@@ -20,6 +20,8 @@ html,body {
 	clear: both;
 }
 
+/* Шапка */
+
 .main-header {
 	margin-bottom: 60px;
 	color: #fff;
@@ -29,6 +31,8 @@ html,body {
 .inner-page .main-header {
 	margin-bottom: 55px;
 }
+
+/* Центровщик */
 
 .container {
 	width: 940px;
@@ -111,6 +115,8 @@ html,body {
 	background: none;
 }
 
+/* Кнопка входа */
+
 .user-block {
 	float: right;
 	max-width: 140px;
@@ -146,6 +152,8 @@ html,body {
 .login:hover::before {
 	opacity: 1;
 }
+
+/* Основной содержание */
 
 .index-logo {
 	width: 368px;
@@ -704,7 +712,212 @@ html,body {
 	margin-top: 15px;
 }
 
-/* Стилизация чекбокса */
+/* Стилизация колонок магазина */
+
+.columns-left {
+	width: 220px;
+	float: left;
+}
+
+.columns-right {
+	width: 700px;
+	float: right;
+}
+
+.columns-left h2 {
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+/* Стилизация чекбоксов магазина */
+
+.checkbox-group .login-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	border: 2px solid #000;
+}
+
+.checkbox-group {
+	margin-bottom: 50px;
+}
+
+.checkbox-group:last-child {
+	margin-bottom: 0;
+}
+
+/* Стилизация радио-кнопок магазина */
+
+.radio-btn input[type="radio"] {
+	display: none;
+}
+
+.radio-btn {
+	position: relative;
+	display: block;
+	margin-bottom: 13px;
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+.radio-btn:hover {
+	color: #663d15;
+}
+
+.radio-btn input[type="radio"] + .radio-indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	border: 2px solid #000;
+	border-radius: 50%;
+}
+
+.radio-btn input[type="radio"]:checked + .radio-indicator::before {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 9px;
+	height: 9px;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.radio-group:last-child {
+	margin-bottom: 0;
+}
+
+.radio-group {
+	margin-bottom: 40px;
+}
+
+/* Товары */
+
+.goods {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 220px;
+	background-color: #fff;
+	box-shadow: 0 0 15px rgba(0, 0, 1, 0.2)
+}
+
+.goods:nth-child(3n) {
+	float: right;
+	margin-right: 0;
+}
+
+.goods img {
+	display: block;
+	width: 220px;
+	height: 165px;
+}
+
+.goods .goods-description {
+	display: block;
+	margin-bottom: 15px;
+	padding: 16px;
+	padding-bottom: 0;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+
+.goods-description span {
+	display: block;
+}
+
+.goods-buy {
+	padding: 16px;
+	padding-top: 0;
+}
+
+.price {
+	float: left;
+	display: inline-block;
+	padding: 10px 0;
+	width: 109px;
+	vertical-align: top;
+	text-align: center;
+	background-color: #e5e5e5;
+}
+
+.btn-buy {
+	float: left;
+	display: inline-block;
+	width: 78px;
+	padding: 10px 0;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	vertical-align: top;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn-buy:hover {
+	background-color: #663d15;
+}
+
+/* Стилизация перключателя */
+
+.toogle ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.toogle li {
+	display: inline-block;
+	margin-right: 7px;
+}
+
+.toogle li:last-child {
+	margin-right: none;
+}
+
+.toogle a {
+	display: block;
+	padding: 15px 20px;
+	background: #000;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+.toogle a:hover {
+	background: #663d15;
+}
+
+.toogle-active a {
+	background: #fff;
+	color: #000;
+	cursor: default;
+}
+
+.toogle-active a:hover {
+	background: #fff;
+}
+
+/* Стилизация чекбокса на главной */
 
 .login-checkbox input[type="checkbox"] {
 	display: none;
@@ -712,7 +925,9 @@ html,body {
 
 .login-checkbox {
 	position: relative;
-	padding-left: 30px;
+	display: block;
+	margin-bottom: 13px;
+	padding-left: 40px;
 	cursor: pointer;
 }
 
