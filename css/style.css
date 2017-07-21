@@ -795,6 +795,15 @@ html,body {
 	margin-bottom: 40px;
 }
 
+.disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.disabled:hover {
+	color: #000;
+}
+
 /* Товары */
 
 .goods {
@@ -809,6 +818,10 @@ html,body {
 .goods:nth-child(3n) {
 	float: right;
 	margin-right: 0;
+}
+
+.goods:hover {
+	box-shadow: 5px 0 25px rgba(0, 1, 1, 0.3);
 }
 
 .goods img {
