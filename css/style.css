@@ -32,8 +32,6 @@ html,body {
 	margin-bottom: 55px;
 }
 
-/* Центровщик */
-
 .container {
 	width: 940px;
 	margin: 0 auto;
@@ -876,6 +874,11 @@ html,body {
 }
 
 /* Стилизация перключателя */
+
+.toogle {
+	float: left;
+	width: 700px;
+}
 
 .toogle ul {
 	margin: 0;
